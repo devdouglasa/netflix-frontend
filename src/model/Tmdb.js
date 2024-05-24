@@ -1,4 +1,4 @@
-const API_KEY = import.meta.env;
+const API_KEY = import.meta.env.VITE_API_KEY;
 const API_BASE = "https://api.themoviedb.org/3";
 
 
@@ -15,7 +15,7 @@ export default {
             {
                 slug: 'originals',
                 title: 'Originais do Netflix',
-                items: await basicFetch(`/discover/tv?with_network=213`),
+                items: await basicFetch(`/discover/tv?with_networks=213`),
             },
             {
                 slug: 'trending',
